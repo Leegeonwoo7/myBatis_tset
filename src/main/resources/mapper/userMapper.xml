@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userSQL">	
+	<insert id="write" parameterType="user.bean.UserDTO">
+		insert into usertable value(#{name},#{id},#{pwd})
+	</insert>
+	
+	<select id="getUserList" resultType="user.bean.UserDTO">
+		select * from usertable
+	</select>
+
+	<update id="update" parameterType="user.bean.UserDTO">
+		update usertable set name = #{name}, pwd = #{pwd} where id = #{id}
+	</update>
+
+
+	<select id="findId" parameterType="string" resultType="user.bean.UserDTO">
+		select * from usertable where id = #{id}
+	</select>
+
+</mapper>
