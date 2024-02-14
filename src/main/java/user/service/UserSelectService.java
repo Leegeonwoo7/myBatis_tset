@@ -13,12 +13,11 @@ public class UserSelectService implements UserService {
         UserDAO userDAO = UserDAO.getInstance();
         List<UserDTO>list= userDAO.getUserList();
 
-        //응답
         for(UserDTO userDTO : list) {
             System.out.println(userDTO.getName()
                     + "\t" +userDTO.getId()
                     + "\t" + userDTO.getPwd());
-        }//for
+        }
     }
 
 }
