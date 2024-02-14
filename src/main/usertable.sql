@@ -1,0 +1,1 @@
+delete from usertable where name is null
