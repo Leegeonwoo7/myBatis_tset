@@ -29,9 +29,5 @@ public class UserInsertService implements UserService {
         userDAO.write(userDTO);
 
         System.out.println("회원 등록 완료");
-
-
     }
-
-
 }
